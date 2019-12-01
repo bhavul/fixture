@@ -1,0 +1,63 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#camera, #camera--view, #camera--sensor{
+    position: fixed;
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+}
+
+.buttons {
+     width: 30%;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+
+}
+
+#camera--trigger {
+   
+    position: fixed;
+    bottom: 30px;
+    left: calc(10%);
+}
+
+.taken{
+    text-align : center;
+
+    height: 300px!important;
+    width:  300px!important;
+    transition: all 0.5s ease-in;
+    border: solid 3px white;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+#output{
+    width: 50%;
+    padding-left: 50%;
+}
+
+#final-image {
+    text-align : center;
+    display : block;
+    height: 50%
+}
+#form-submit {
+    text-align:center;
+    height: 50%;
+}
+
+#form-submit div {
+    padding-top: 20px;
+}

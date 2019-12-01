@@ -1,0 +1,58 @@
+<html lang=”en”>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Name of the app -->
+		<title>Camera App</title>
+
+		<!-- Link to main style sheet -->
+		<link rel="stylesheet" href="/static/style.css"> 
+		<script src="/static/mousetrap.min.js"></script>
+		<script src="/static/jquery.min.js"></script>
+		<script src="/static/app.js"></script> 
+		
+	</head>
+	<body>
+
+		<!-- Camera -->
+		<div id="camera">
+
+		    <!-- Camera sensor -->
+		    <canvas id="camera--sensor"></canvas>
+		    
+		    <!-- Camera view -->
+		    <video id="camera--view" autoplay playsinline></video>
+		    
+		    <!-- Camera output -->
+		    <!-- Camera trigger -->
+		    <button id="camera--trigger" class="buttons">Take a picture</button>
+
+		</div>
+
+
+		<div id = "output">
+			<div id="final-image">
+				<img src="" alt="" id="camera--output">
+			</div>
+			<div id = "form-submit">
+				<div>
+					<label>Is it a good posture?</label>
+				</div>
+				<div>
+					<input type="radio" class="posture" name="posture" value="Good" id="yes" /> Yes
+					<input type="radio" class="posture" name="posture" value="Bad" id="no"/> No
+				</div>
+				<div>
+					<div>
+						<button id="submit" class="buttons" >Submit</button>
+					</div>
+					<div>
+						<button id="cancel" class="buttons">Cancel</button>
+				</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

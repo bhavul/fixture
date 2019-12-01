@@ -2,6 +2,7 @@ from flask import Flask
 from flask import request, Response, jsonify
 import image_util
 from datetime import datetime
+from flask import render_template
 import os
 import logging
 
@@ -16,6 +17,9 @@ class APIResponse:
             result = {'status': 'Error', 'message':str(error)}
         return jsonify(result), status_code
 
+@app.route('/')
+def render_static():
+    return render_template('index.html')
 
 @app.route('/image', methods=['POST'])
 def save_labelled_image():
@@ -45,4 +49,4 @@ def get_today_date_in_str():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000, debug=True)
