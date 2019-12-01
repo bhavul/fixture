@@ -28,7 +28,9 @@ function keyboardBinding() {
 };
 
 $(document).ready(function(){
-    
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      $('#camera').text('mobile devices are not supported!')
+    }
     var browserDetails = navigator.userAgent;
     
     let imageData = ""
