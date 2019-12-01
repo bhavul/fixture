@@ -85,7 +85,8 @@ $(document).ready(function(){
             var json =  {
                 "base64": imageData.split(',')[1],
                 "label": $('input[name=posture]:checked').val(),
-                "extension": "png"
+                "extension": "png",
+                "details" : navigator.appVersion
             };
           $.ajax('http://localhost:5000/image', {
             type: 'POST',
