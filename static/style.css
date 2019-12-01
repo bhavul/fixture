@@ -5,7 +5,7 @@ html, body{
   width: 100%;
 }
 
-#camera, #camera--view, #camera--sensor{
+#camera--view, #camera--sensor{
     position: fixed;
     height: 100%;
     width: 50%;
