@@ -67,6 +67,8 @@ $(document).ready(function(){
         cameraSensor.width = cameraView.videoWidth;
         cameraSensor.height = cameraView.videoHeight;
     
+        $("#submit").text('Submit');
+        $("#submit").css("background-color", 'black');
         cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
         $('#output').show()
         $('#camera--output').show()
@@ -96,8 +98,12 @@ $(document).ready(function(){
             contentType: 'application/json; charset=utf-8' ,
     success: function (data, status, xhr) {
         console.log('success')
+        $('#submit').text('Success!')
+        $("#submit").css("background-color", 'green');
     },
     error: function (jqXhr, textStatus, errorMessage) {
+        $('#submit').text('Something went wrong')
+        $("#submit").css("background-color", 'red');
         console.log('error')
     }
     })
